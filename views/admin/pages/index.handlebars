@@ -1,0 +1,40 @@
+<section class="admin-pages">
+  <h2 class="section-title">Редактирование контента страниц</h2>
+  {{!-- <a href="/admin/pages/add" class="btn round">Добавить</a> --}}
+  <div class="container">
+    <table>
+          <tr>
+            <th>Страница</th>
+            <th>Редактировать</th>
+          </tr>
+          {{#each pages}}
+          <tr>
+            <td>{{welcome.title}}</td>
+            <td>
+              <div class="row">
+                <a class="btn" href="/admin/pages/edit/welcome/{{welcome.id}}">Изменить</a>                
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>{{children.title}}</td>
+            <td>
+              <div class="row">
+                <a class="btn" href="/admin/pages/edit/children/{{children.id}}">Изменить</a>
+                <a class="btn" href="/admin/pages/add/children/program">Добавить программу</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>{{restaraunt.title}}</td>
+            <td>
+              <div class="row">
+                <a class="btn" href="/admin/pages/edit/restaraunt/{{restaraunt.id}}">Изменить</a>
+                <a class="btn" href="/admin/pages/add/restaraunt/renter">Добавить арендатора</a>
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+    </table>
+  </div>
+</section>

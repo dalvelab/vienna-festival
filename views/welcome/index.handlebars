@@ -1,0 +1,258 @@
+{{#each welcome}}
+<section class="welcome-hero">
+  {{#each image}}
+  <img src="/uploads/{{image}}" alt="" class="welcome-hero">
+  {{/each}}
+  <div class="container">
+    <div class="welcome-counter" time="{{time}}">
+      <div id="clockdiv" class="counter">
+        <div class="counter-number">
+          <span class="days"></span>
+          <div class="smalltext upper light">Дней</div>
+        </div>
+        <div class="counter-number">
+          <span class="hours"></span>
+          <div class="smalltext upper light">Часов</div>
+        </div>
+        <div class="counter-number">
+          <span class="minutes"></span>
+          <div class="smalltext upper light">Минут</div>
+        </div>
+        <div class="counter-number">
+          <span class="seconds"></span>
+          <div class="smalltext upper light">Секунд</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#information" class="scroll-down">
+    <i class="font-white material-icons">arrow_downward</i>
+  </a>
+  <a class="fixed-round-button font-white upper bold" href="/program">
+    <i class="material-icons">today</i>
+  </a>
+</section>
+
+<section id="information" class="welcome-info">
+  <h2 class="section-title">О <span class="font-red">Фестивале</span></h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <div class="card">
+        <div class="icon">
+          <i class="material-icons">calendar_today</i>
+        </div>
+        <h6 class="title text-center">Когда?</h6>
+        <p class="thesis text-center">
+          Дата проведения: 3 - 27 июля 2019 года
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <i class="material-icons">location_on</i>
+        </div>
+        <h6 class="title text-center">Где?</h6>
+        <p class="thesis text-center">
+          г. Екатеринбург ул. Мира 19, 
+          <br>
+          площадь перед главным корпусом УРФУ
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <i class="material-icons">access_time</i>
+        </div>
+        <h6 class="title text-center">Во сколько?</h6>
+        <p class="thesis text-center">
+          Ежедневно: с 20:00
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <i class="material-icons">money_off</i>
+        </div>
+        <h6 class="title text-center">Вход бесплатный</h6>
+        <p class="thesis text-center">
+          Все мероприятия бесплатны для посещения
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="welcome-banners">
+  <h2 class="section-title">Баннеры</h2>
+  <div class="container">
+    <div class="slider">
+      {{#each banners}}
+      <div class="slide current">
+        <img src="/uploads/{{image}}" alt="">
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section class="welcome-map">
+  <h2 class="section-title">Схема <span class="font-red">Фестиваля</span></h2>
+  <div class="container">
+    <img src="/images/welcome-map.jpg" alt="">
+  </div>
+</section>
+
+<section class="welcome-sponsors">
+  <h2 class="section-title">Наши <span class="font-red">Спонсоры</span> </h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <a href="https://www.ugmk.com" class="card" target="_blank">
+        <img src="/images/sponsor-logo-ummc.png" alt="" class="image">
+        <h6 class="title text-center">УГМК</h6>
+      </a>
+      <a href="http://ssk-ur.ru/" class="card" target="_blank">
+        <img src="/images/sponsor-logo-ssk.png" alt="" class="image">
+        <h6 class="title text-center">ССК</h6>
+      </a>
+      <a href="https://www.raiffeisen.ru/" class="card" target="_blank">
+        <img src="/images/sponsor-logo-bank.png" alt="" class="image">
+        <h6 class="title text-center">Райффазен Банк</h6>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="welcome-supporters">
+  <h2 class="section-title">При  <span class="font-red">поддержке</span></h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <a href="https://xn--80acgfbsl1azdqr.xn--p1ai/" class="card" target="_blank">
+        <img src="/images/supporer-ekb.jpg" alt="" class="image">
+        <h6 class="title text-center">Администрация Екатеринбурга</h6>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="welcome-organisators">
+  <h2 class="section-title font-red">Организаторы</h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <a href="https://www.imz.at/" class="card" target="_blank">
+      <div class="card-image-wrapper">
+        <img src="/images/organisator-imz.jpg" alt="" class="scalable-image">
+      </div>
+        <h6 class="title text-center">IMZ</h6>
+      </a>
+      <a href="https://urfu.ru/" class="card" target="_blank">
+        <img src="/images/organisator-urfu.jpg" alt="" class="image">
+        <h6 class="title text-center">УРФУ</h6>
+      </a>
+      <a href="http://www.hkat-ekb.ru/ru/" class="card" target="_blank">
+      <div class="card-image-wrapper">
+        <img src="/images/organisator-ac.jpg" alt="" class="scalable-image">
+      </div>        
+        <h6 class="title text-center">Австрийское Консульство</h6>
+      </a>
+      <a href="http://www.akfmo.org/" class="card" target="_blank">
+        <div class="card-image-wrapper">
+          <img src="/images/organisator-acf.jpg" alt="" class="scalable-image">
+        </div>
+        <h6 class="title text-center">Австрийский Культурный Форум</h6>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="welcome-mediapart">
+  <h2 class="section-title">Генеральные <span class="font-red">Медиапартнеры</span> </h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <a href="https://momenty.org/" class="card" target="_blank">
+        <div class="card-image-wrapper">
+          <img src="/images/partner_mom.jpg" alt="" class="scalable-image">
+        </div>
+        <h6 class="title text-center">Моменты</h6>
+      </a>
+      <a href="http://www.avtoradio.ru/" class="card" target="_blank">
+        <img src="/images/partner_avto.jpg" alt="" class="image">
+        <h6 class="title text-center">Авто Радио</h6>
+      </a>
+      <a href="http://www.tele.ru/" class="card" target="_blank">
+        <img src="/images/partner_tele.jpg" alt="" class="image">
+        <h6 class="title text-center">Теленеделя</h6>
+      </a>
+      <a href="https://vibirai.ru/" class="card" target="_blank">
+        <div class="card-image-wrapper">
+          <img src="/images/partner_vibi.jpg" alt="" class="scalable-image">
+        </div>
+        <h6 class="title text-center">Выбирай</h6>
+      </a>
+      <a href="https://www.studio-41.com/" class="card" target="_blank">
+        <img src="/images/partner_41.jpg" alt="" class="image">
+        <h6 class="title text-center">41 Домашний</h6>
+      </a>
+      <a href="https://eanews.ru/" class="card" target="_blank">
+      <div class="card-image-wrapper">
+        <img src="/images/partner_ean.jpg" alt="" class="scalable-image">
+      </div>
+        <h6 class="title text-center">ЕАН</h6>
+      </a>
+      <a href="http://www.rataksa.ru/" class="card" target="_blank">
+        <div class="card-image-wrapper">
+          <img src="/images/partner_taksa.jpg" alt="" class="scalable-image">
+        </div>
+        <h6 class="title text-center">Такса</h6>
+      </a>
+      <a href="https://domashniy.ru/" class="card" target="_blank">
+        <div class="card-image-wrapper">
+          <img src="/images/partner_dom.jpg" alt="" class="scalable-image">
+        </div>
+        <h6 class="title text-center">Домашний</h6>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = document.querySelector('.welcome-counter').getAttribute('time');
+initializeClock('clockdiv', deadline);
+</script>
+<script src="/js/welcome.js"></script>
+{{/each}}

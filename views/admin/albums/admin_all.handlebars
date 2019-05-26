@@ -1,0 +1,20 @@
+<section class="albums-all">
+  <h2 class="section-title">Редактировать / Добавить <span class="font-red">Альбомы</span></h2>
+  <a href="/admin/album/add" class="btn round upper">Добавить альбом</a>
+  <div class="container">
+      <div class="wrapper-row">
+        {{#each albums}}
+        <div class="card">
+        <a href="/admin/album/{{id}}" class="edit-icon">  
+          <i class="material-icons">delete</i>          
+        </a>
+          {{#listItem 0 1 images}}
+          <img src="/uploads/{{image}}" alt="" class="image" style="margin-top: 0px">
+          {{/listItem}}
+          <h6 class="title">{{title}}</h6>
+          <p class="thesis" style="text-align: center">{{year}}</p>
+        </div>
+        {{/each}}
+      </div>
+  </div>
+</section>

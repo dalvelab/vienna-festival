@@ -1,0 +1,87 @@
+{{#each restaraunt}}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+
+<section class="restaurant-welcome">
+  <h2 class="section-title">Ресторанный <span class="font-red">Дворик</span></h2>
+  <div class="container">
+    <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non corporis consequuntur commodi iste necessitatibus sunt eveniet et, illo sint rerum perspiciatis aspernatur pariatur, explicabo aliquam quas, eos enim eum omnis ipsum vel laborum minima! Est quibusdam atque enim ab aliquid ratione autem, mollitia facilis voluptatum tempore nobis quo ullam. Suscipit magnam libero mollitia consequatur error tempore quaerat nostrum. Eligendi, error placeat perspiciatis cupiditate provident nemo nihil eius, quae vel eum neque alias, nulla totam. Doloremque error iste a? Cum similique neque veritatis. Nulla iste veritatis at repellat, cum obcaecati praesentium aut rem voluptatibus labore eos officiis quaerat earum ullam.</p>
+  </div>
+</section>
+
+<section class="restaurant-gallery">
+  <h2 class="section-title">Галерея</h2>
+    <div class="slider slider-nav slick-gallery" data-slick="{&quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 1, &quot;fade&quot;: false, &quot;cssEase&quot;: &quot;linear&quot;, &quot;arrows&quot;: false, &quot;centerMode&quot;: false, &quot;focusOnSelect&quot;: true, &quot;variableWidth&quot;: true, &quot;autoplay&quot;: false, &quot;responsive&quot;: [{&quot;breakpoint&quot;: 1400, &quot;settings&quot;: {&quot;centerMode&quot;: true}}]}">
+    {{#each banners}}
+    <div class="gallery-image-wrapper"><img src="/uploads/{{image}}" class="gallery-image"></div>
+    {{/each}}
+  </div>
+</section>
+
+<section class="restaurant-sketch">
+  <h2 class="section-title">Проект <span class="font-red">Домиков</span></h2>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <img src="/images/stub-3.jpg" alt="">
+      </div>
+      <div class="column">
+        <h6 class="title">Заголовок</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, eos soluta tempora repellendus totam deleniti, officiis molestias, officia excepturi magni temporibus quis omnis tenetur exercitationem! Debitis doloribus deleniti nisi quasi consequuntur, blanditiis eius dolorum tempore minus soluta repudiandae, molestiae autem dolorem, doloremque possimus ad ipsum velit magnam recusandae repellendus impedit!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h6 class="title">Заголовок</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, eos soluta tempora repellendus totam deleniti, officiis molestias, officia excepturi magni temporibus quis omnis tenetur exercitationem! Debitis doloribus deleniti nisi quasi consequuntur, blanditiis eius dolorum tempore minus soluta repudiandae, molestiae autem dolorem, doloremque possimus ad ipsum velit magnam recusandae repellendus impedit!</p>
+      </div>
+      <div class="column">
+        <img src="/images/stub-2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="restaurant-renters">
+  <h2 class="section-title">Арендаторы</h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <div class="card hoverable">
+        <div class="card-overlay">
+          <h6 class="font-white">Меню</h6>
+          <ul class="menu-list font-white">
+            <li>Какая-то еда</li>
+            <li>Какая-то еда</li>
+            <li>Какая-то еда</li>
+            <li>Какая-то еда</li>
+          </ul>
+          <a href="#" class="btn round">Перейти на Сайт</a>
+        </div>
+        <img class="image" src="/images/stub-1.jpg" alt="">
+        <h6 class="title">Название Арендатора</h6>
+        <ul class="icons-list">
+          <li><i class="fas fa-apple-alt"></i></li>
+          <li><i class="fas fa-hamburger"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="restaurant-documents">
+  <h2 class="section-title">Скачать <span class="font-red">Документы</span></h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <div class="card">
+        <img src="/images/word_logo.png" alt="" class="image">
+        <h6 class="title">Чертеж Домика</h6>
+        <a href="#" class="btn round" download="#" target="_blink">Скачать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+<script src="/js/gallery.js"></script>
+{{/each}}

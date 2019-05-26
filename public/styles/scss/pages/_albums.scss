@@ -1,0 +1,20 @@
+.album-single {
+  .grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    position: relative;
+    margin-top: 15px;
+    img {
+      max-width: 100%;
+    }
+    @include screen(tablet-wide) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include screen(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

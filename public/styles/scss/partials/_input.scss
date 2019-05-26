@@ -1,0 +1,60 @@
+// GLOBAL STYLES FOR TAGS
+label, input, textarea {
+  font-family: 'Montserrat';
+  font-size: 16px;
+} 
+
+// CRUD FUNCTIONAL: FORM, LABEL, INPUT, TEXTAREA
+.crud-form {
+  width: 768px;
+  margin: auto;
+}
+.input-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.crud-input {
+  background-color: $white;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border: 2px solid $gray;
+  border-radius: 20px;
+  outline: none;
+}
+
+.crud-textarea {
+  width: 100%;
+  border: 2px solid $gray;
+  outline: none;
+  margin: 8px 0;
+}
+
+#cke_body {
+  margin: 8px 0px;
+}
+
+#editorjs {
+  border: 2px solid $gray;
+  font-size: 16px;  
+  margin: 8px 0;
+  border-radius: 20px;  
+}
+
+// FOOTER SUB INPUT
+.footer-sub-input {
+  width: 250px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  color: $red;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  width: calc(100% - 50px);
+  border: 2px solid $gray;
+}

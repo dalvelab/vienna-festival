@@ -1,0 +1,51 @@
+button {
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  outline: none;
+  overflow: hidden;
+}
+
+.btn {
+  padding: 12px 50px;
+  border: 1px solid $red;
+  margin: 10px auto 10px auto; 
+  color: $red;
+  font-size: 12px;
+  position: relative;
+  background-color: $white;
+  z-index: 1;
+  transition: .2s ease-in-out;
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.round {
+  border-radius: 20px;
+}
+
+.slide-left {
+  &::before {
+    content: '';    
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $red;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  &:hover {
+    color: $white;
+    &::before {
+      transform-origin: center left;
+      transform: scaleX(1);       
+    }
+  }
+}

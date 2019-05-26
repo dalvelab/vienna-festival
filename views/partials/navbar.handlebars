@@ -1,0 +1,68 @@
+<nav class="fixed-navigation-top">
+  <div class="container">
+    <h6 class="nav-title font-black">
+      <i id="openSidebar" class="material-icons">menu</i>
+      #Венский <span class="font-red">Фестиваль</span> 
+    </h6>
+    <div class="nav-weather"></div>
+  </div>
+</nav>
+<aside class="sidebar">
+  <i id="closeSidebar" class="material-icons">close</i>
+  <div class="logotype">
+    <img src="/images/logo_sidebar.png" alt="">
+  </div>
+  <ul class="menu">
+    <a class="link font-black regular" href="/" class="link">
+      <i class="material-icons">home</i>
+      Главная
+    </a>
+    <a class="link font-black regular" href="/program" class="link">
+      <i class="material-icons">music_note</i>
+      Программа Фестиваля
+    </a>
+    <a class="link font-black regular" href="/shop" class="link">
+      <i class="material-icons">shopping_basket</i>
+      Сувениры
+    </a>
+    <a class="link font-black regular" href="/albums" class="link">
+      <i class="material-icons">photo</i>
+      Фото
+    </a>
+    <a class="link font-black regular" href="/page/restaurant" class="link">
+      <i class="material-icons">restaurant</i>
+      Ресторанный Дворик
+    </a>
+    <a class="link font-black regular" href="/page/children" class="link">
+      <i class="material-icons">child_care</i>
+      ВФ для детей
+    </a>
+    <a class="link font-black regular" href="/page/about" class="link">
+      <i class="material-icons">info</i>
+      О фестивале
+    </a>
+    {{#if user.isAdmin}}
+    <a class="link font-black regular" href="/admin" class="link">
+      <i class="material-icons">dashboard</i>
+      Админ Панель
+    </a>
+    {{/if}}
+    {{#if user}}
+    <a class="link font-black regular" href="/users/current" class="link">
+      <i class="material-icons">dashboard</i>
+      Личный кабинет
+    </a>
+    <a class="link font-black regular" href="/users/logout" class="link">
+      <i class="material-icons">exit_to_app</i>
+      Выйти
+    </a>
+    {{else}}
+    <a class="link font-black regular" href="/users/auth" class="link">
+      <i class="material-icons">person</i>
+      Войти / Регистрация
+    </a>
+    {{/if}}
+  </ul>
+</aside>
+
+{{!-- <script src="/js/weather.js"></script> --}}

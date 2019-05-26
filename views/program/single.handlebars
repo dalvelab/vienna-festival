@@ -1,0 +1,41 @@
+<section class="single-program">
+  <img class="blured-bg-image" src="/{{day.image}}" alt="">
+  <div class="container">
+    <div class="card-single-program">
+      <img src="/{{day.image}}" alt="" class="image">
+      <div class="card-content">
+        <div class="overlay-card">
+          <div class="left">
+            <div class="date-circle">
+              <p class="number bold">9</p>
+              <p class="month regular">июля</p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="content">
+              <h4 class="title bold">{{day.title}}</h4>
+              <p class="thesis">{{day.thesis}}.</p>
+              <ul class="content-icon-list">
+                <li>
+                  <i class="material-icons">watch_later</i>
+                  <h6>Начало в {{day.time}}</h6>
+                </li>
+                <li>
+                  <i class="material-icons">location_on</i>
+                  <h6>ул.Мира 21, площадь Кирова</h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a class="btn round" href="">Печать</a>
+          <a class="btn round" href="">Добавить к себе</a>
+        </div>
+        <div class="text-content">
+          {{{day.description}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="crud-program">
+  <h2 class="section-title">Добавить  <span class="font-red">Ресторанный Дворик</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/admin/pages/restaraunt" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="text">Название страницы</label>
+        <input type="text" name="title" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Баннеры (1920 x 1080 - несколько изображений)</label>
+        <input type="file" name="banners" class="crud-input" multiple>
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>

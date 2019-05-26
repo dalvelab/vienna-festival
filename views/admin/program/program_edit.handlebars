@@ -1,0 +1,51 @@
+<section class="crud-program">
+  <h2 class="section-title">Редактировать <span class="font-red">День</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/admin/program/{{day.id}}?_method=PUT" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="PUT">
+      <div class="input-group">
+        <label for="text">Заголовок</label>
+        <input type="text" name="title" class="crud-input" value="{{day.title}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Число дня фестиваля (Первый день - 1) </label>
+        <input type="number" name="day" class="crud-input" value="{{day.day}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Число месяца (Просто цифра) </label>
+        <input type="number" name="number" class="crud-input" value="{{day.number}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Месяц (Июль)</label>
+        <input type="text" name="month" class="crud-input" value="{{day.month}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Время Начала(19:00) </label>
+        <input type="text" name="time" class="crud-input" value="{{day.time}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Изображение (1920 x 1080)</label>
+        <input type="file" name="image" class="crud-input" value="{{day.image}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Место (Площадь Кирова, УРФУ)</label>
+        <input type="text" name="place" class="crud-input" value="{{day.place}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Тезис (макс. 10 слов)</label>
+        <input type="text" name="thesis" class="crud-input" value="{{day.thesis}}">
+      </div>
+      <div class="input-group">
+        <label for="text">Большой текст описания</label>
+        <textarea name="body" id="" cols="30" rows="10" class="crud-textarea">{{day.description}}</textarea>
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>
+
+{{!-- CKEDITOR JS --}}
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace( 'body' );
+</script>

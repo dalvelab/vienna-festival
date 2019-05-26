@@ -1,0 +1,16 @@
+<section class="albums-all">
+  <h2 class="section-title">Все <span class="font-red">Альбомы</span></h2>
+  <div class="container">
+      <div class="wrapper-row">
+        {{#each albums}}
+        <a href="/albums/{{year}}" class="card">
+          {{#listItem 0 1 images}}
+          <img src="/uploads/{{image}}" alt="" class="image" style="margin-top: 0px">
+          {{/listItem}}
+          <h6 class="title">{{title}}</h6>
+          <p class="thesis" style="text-align: center">{{year}}</p>
+        </a>
+        {{/each}}
+      </div>
+  </div>
+</section>

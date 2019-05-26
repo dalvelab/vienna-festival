@@ -1,0 +1,20 @@
+<section class="add-album">
+  <h2 class="section-title">Добавить <span class="font-red">Альбом</span></h2>
+  <div class="container">
+     <form class="crud-form" action="/admin/albums" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="text">Название Фестиваля (X Венский Фестиваль)</label>
+        <input type="text" name="title" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Год</label>
+        <input type="number" name="year" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Фотографии (1920 x 1080 - несколько изображений)</label>
+        <input type="file" name="images" class="crud-input" multiple>
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+{{#each children}}
+<section class="children-welcome">
+  <h2 class="section-title">ВФ для <span class="font-red">Детей</span></h2>
+  <div class="container">
+    <p class="plain-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quisquam quas aut debitis officiis corporis modi consequatur velit! Unde quaerat doloremque dolorum dolore, ducimus quia eligendi dicta deserunt explicabo numquam quas placeat molestias iste dolor maiores, voluptas cupiditate suscipit veniam, consequatur illum possimus iusto nemo quae. Accusamus autem et minima dolore quisquam, suscipit est, corporis beatae veniam rem pariatur eius ex quibusdam quis quos mollitia sed deserunt dignissimos amet, perferendis officia reiciendis? Aliquam dignissimos exercitationem error, officia unde sit voluptatem, similique itaque doloremque sed nemo sapiente fugiat harum accusamus consectetur magni sequi. Dolorem accusantium, quaerat nulla consequatur aliquam corrupti eligendi!</p>
+  </div>
+</section>
+
+<section class="children-gallery">
+  <h2 class="section-title">Фотографии</h2>
+    <div class="slider slider-nav slick-gallery" data-slick="{&quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 1, &quot;fade&quot;: false, &quot;cssEase&quot;: &quot;linear&quot;, &quot;arrows&quot;: false, &quot;centerMode&quot;: false, &quot;focusOnSelect&quot;: true, &quot;variableWidth&quot;: true, &quot;autoplay&quot;: false, &quot;responsive&quot;: [{&quot;breakpoint&quot;: 1400, &quot;settings&quot;: {&quot;centerMode&quot;: true}}]}">
+    {{#each banners}}
+      <div class="gallery-image-wrapper"><img src="/uploads/{{image}}" class="gallery-image"></div>
+    {{/each}}
+  </div>
+</section>
+
+<section class="children-program">
+  <h2 class="section-title">Детская <span class="font-red">Программа</span></h2>
+  <div class="container">
+    <div class="wrapper-row">
+      <div class="card-program">
+        <img src="/images/program-hero.jpg" alt="" class="image">
+        <div class="small-overlay">
+          <div class="top">
+            <div class="date-circle">
+              <div class="number bold">9</div>              
+              <div class="month regular">июля</div>
+            </div>
+            <div class="info-container">
+              <h6 class="bold">Активность для Детей</h6>
+              <div class="begining">Начало в 19:00</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="place bold">УРФУ, что-то еще</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="children-contest">
+  <h2 class="section-title">Детский <span class="font-red">Конкурс</span></h2>
+  <div class="container">
+      <p class="plain-text">{{{contest}}}</p>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+<script src="/js/gallery.js"></script>
+{{/each}}

@@ -1,0 +1,52 @@
+<section class="section-auth">
+  <div class="container">
+    <div class="auth-container" id="auth-container">
+      <div class="form-container sign-up-container">
+        <form action="/users/register" method="POST">
+          <h2>Создать Аккаунт</h2>
+          <input type="text" placeholder="Ваше Имя" name="name" value="{{name}}" />
+          <input type="email" placeholder="Ваш Email" name="email" value="{{email}}" />
+          <input type="password" placeholder="Пароль" name="password" value="{{password}}"/> 
+          <button>Зарегистрироваться</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/users/login" method="POST">
+          <h2>Войти</h2>
+          <input type="email" placeholder="Email" name="email" />
+          <input type="password" placeholder="Пароль" name="password" />
+          <a href="/users/forget">Забыли пароль?</a>
+          <button>Войти</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="auth-overlay">
+          <div class="overlay-panel overlay-left">
+            <h2>Привет!</h2>
+            <p>Если у вас уже есть аккаунт, то просто нажмите кнопку ниже</p>
+            <button class="ghost" id="signIn">Войти</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2>Добро пожаловать!</h2>
+            <p>Если у вас нет аккаунта, то просто нажмите кнопку ниже</p>
+            <button class="ghost" id="signUp">Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const signUpButton = document.getElementById('signUp');
+  const signInButton = document.getElementById('signIn');
+  const container = document.getElementById('auth-container');
+
+  signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+  });
+</script>

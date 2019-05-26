@@ -1,0 +1,203 @@
+// 1 Section
+.welcome-hero {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  .container {
+    height: calc(100vh - 80px);
+  }
+  .welcome-hero {
+    @include center(both);
+    top: 45%;
+    object-fit: cover;
+    @include screen(phone) {
+      top: 30%;
+      width: 600px;
+      height: 350px;    
+    }
+    @media screen and (min-height: 600px) {
+      width: 800px;
+      height: 550px;
+      top: 40%;
+    }
+    @media screen and (min-height: 600px) and (max-width: 480px) {
+      width: 800px;
+      height: 550px;
+      top: 40%;
+    }
+  }
+  .welcome-counter {
+    width: auto;
+    height: auto;
+    margin: auto auto 100px auto;
+    @include screen(phone) {
+      width: 280px;
+      height: auto;       
+    }
+    .counter {
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      background-color: $red;
+      box-shadow: 0 4px 30px $red;
+      grid-gap: 5px;
+      .counter-number {
+        width: 90px;
+        height: 90px;        
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include screen(phone) {
+          width: 65px;
+          height: 65px;   
+          font-size: 25px;      
+        }
+        span {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include screen(phone) {
+            width: 40px;
+            height: 40px;         
+          }
+        }
+      }
+      .smalltext{
+        font-size: 12px;
+    }
+    }
+  }
+  .scroll-down {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $red;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+// 2 Section
+.welcome-info {
+  margin-top: 20px;
+  height: auto;
+  min-height: 50vh;
+}
+
+// 3 Section
+.welcome-banners {
+  margin-top: 25px;
+  height: auto;
+  .slider {
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+    width: 100%;
+    @include screen(phone) {
+      height: 50vh;
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+      img {
+        object-fit: cover;
+        max-width: 100%;
+        @include screen(phone) {
+          height: 50vh;
+        }
+      }
+    }
+    .current {
+     opacity: 1;
+    }
+  }
+  .buttons {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    button {
+      border: 2px solid $black;
+      background-color: transparent;
+      color: $black;
+      cursor: pointer;
+      padding: 13px 15px;
+      border-radius: 50%;
+      outline: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .2s ease-in-out;
+      &:hover {
+        background-color: $black;
+        i {
+          color: $white;
+        }
+      }
+    }
+    #next {
+      right: -70px;
+    }
+    #prev {
+      left: -70px;
+    }
+  }
+}
+
+// 4 Section
+.welcome-map {
+  margin-top: 20px;
+  .container {
+    height: 90vh;
+    @include screen(phone) {
+      height: 60vh;
+    }
+  }
+  img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    @include screen(phone) {
+      height: 50vh;
+    }
+  }
+}
+
+// 5,6 Section
+.welcome-sponsors,
+.welcome-supporters,
+.welcome-organisators,
+.welcome-mediapart {
+  .wrapper-row {
+    margin-top: 15px;
+    .card {
+      width: 300px;
+      height: 270px;
+      .title {
+        margin-top: 8px;
+        color: $black;
+      }
+    }
+  }
+}

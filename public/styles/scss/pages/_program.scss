@@ -1,0 +1,41 @@
+.main-program {
+  .section-title {
+    margin-top: 17.5px;
+  }
+  .wrapper-row {
+    .card {
+      width: 350px;
+      height: 400px;
+      text-align: center;
+      img {
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.single-program {
+  margin-top: -20px;
+  background-color: $white;
+  .container {
+    @include screen(phone) {
+      width: 100% !important;
+    }
+  }
+  .blured-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    filter: blur(8px);
+    object-fit: cover;
+    @media screen and (max-width: 1400px) {
+      height: 60%;
+    }
+    @include screen(phone) {
+      display: none;
+    }
+  }
+}

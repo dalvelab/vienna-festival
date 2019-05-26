@@ -1,0 +1,64 @@
+// MIXINS
+@import 'helpers/_mixins';
+
+// COLORS 
+@import 'helpers/_colors';
+
+// FONTS
+@import 'helpers/_fonts';
+
+// GLOBAL
+@import 'helpers/_global';
+
+// BUTTONS
+@import 'partials/_buttons';
+
+// NAVIGATION
+@import 'partials/navbar';
+
+// SIDEBAR
+@import 'partials/_sidebar';
+
+// FOOTER
+@import 'partials/_footer';
+
+// CARD
+@import 'partials/_card';
+
+// GALLERY
+@import 'partials/_gallery';
+
+// INPUTS
+@import 'partials/_input';
+
+// ALERTS
+@import 'partials/_alerts';
+
+// PAGES
+
+// WELCOME
+@import 'pages/_welcome.scss';
+
+// AUTH
+@import 'pages/_auth.scss';
+
+// PROGRAM
+@import 'pages/_program';
+
+// ADMIN
+@import 'pages/_admin';
+
+// SHOP 
+@import 'pages/_shop';
+
+// ALBUM
+@import 'pages/_albums';
+
+// RESTAURANT
+@import 'pages/_restaurant';
+
+// CHILDREN
+@import 'pages/_children';
+
+// WEATHER
+@import 'partials/_weather';

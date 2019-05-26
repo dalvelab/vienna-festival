@@ -1,0 +1,31 @@
+<section class="main-program">
+  <h2 class="section-title">Программа <span class="font-red">Фестиваля 2019</span></h2>
+  <h6 class="section-thesis regular">В первый день живой концерт, заключительный - живой диджей парад, остальное - показ записей музыкальных фильмов</h6>
+  <div class="container">
+    <div class="wrapper-row">
+    {{#each days}}
+      <a href="/program/{{day}}" class="card-program">
+        <img src="/{{image}}" alt="" class="image">
+        <div class="small-overlay">
+          <div class="top">
+            <div class="date-circle">
+              <div class="number bold">{{number}}</div>              
+              <div class="month regular">{{month}}</div>
+            </div>
+            <div class="info-container">
+              <h6 class="bold">{{title}}</h6>
+              <div class="begining">Начало в {{time}}</div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="place bold">{{place}}</div>
+            <div class="link-to-page">
+              <i class="material-icons">arrow_forward</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    {{/each}}
+    </div>
+  </div>
+</section>

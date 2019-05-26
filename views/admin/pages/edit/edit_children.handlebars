@@ -1,0 +1,17 @@
+<section class="crud-program">
+  <h2 class="section-title">Редактировать  <span class="font-red">ВФ для Детей</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/admin/pages/children/{{children.id}}?_method=PUT" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="PUT">
+      <div class="input-group">
+        <label for="text">Название страницы</label>
+        <input type="text" name="title" value="{{children.title}}" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Баннеры (1920 x 1080 - минимум 4 изображения)</label>
+        <input type="file" name="banners" value="{{children.banners}}" class="crud-input" multiple>
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>

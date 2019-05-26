@@ -1,0 +1,33 @@
+.partly-cloudy-day,
+.partly-cloudy-night {
+  background-image: url('../../icons/weather/Cloud-Sun.svg');
+}
+
+.cloudy {
+  background-image: url('../../icons/weather/Cloud.svg');
+}
+
+.rain {
+  background-image: url('../../icons/weather/Cloud-Rain.svg');
+}
+
+.clear-day,
+.clear-night {
+  background-image: url('../../icons/weather/Sun.svg');
+}
+
+.snow {
+  background-image: url('../../icons/weather/Snowflake.svg');
+}
+
+.wind {
+  background-image: url('../../icons/weather/Cloud-Wind.svg');
+}
+
+.fog {
+  background-image: url('../../icons/weather/Cloud-Fog.svg');
+}
+
+.sleet {
+  background-image: url('../../icons/weather/Cloud-Snow.svg');
+}
