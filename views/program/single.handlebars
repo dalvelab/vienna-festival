@@ -1,20 +1,20 @@
 <section class="single-program">
-  <img class="blured-bg-image" src="/{{day.image}}" alt="">
+  <img class="blured-bg-image" src="/uploads/{{day.image}}" alt="">
   <div class="container">
     <div class="card-single-program">
-      <img src="/{{day.image}}" alt="" class="image">
+      <img src="/uploads/{{day.image}}" alt="" class="image">
       <div class="card-content">
         <div class="overlay-card">
           <div class="left">
             <div class="date-circle">
-              <p class="number bold">9</p>
-              <p class="month regular">июля</p>
+              <p class="number bold">{{day.number}}</p>
+              <p class="month regular">{{day.month}}</p>
             </div>
           </div>
           <div class="right">
             <div class="content">
               <h4 class="title bold">{{day.title}}</h4>
-              <p class="thesis">{{day.thesis}}.</p>
+              <p class="thesis">{{day.thesis}}</p>
               <ul class="content-icon-list">
                 <li>
                   <i class="material-icons">watch_later</i>
@@ -22,15 +22,17 @@
                 </li>
                 <li>
                   <i class="material-icons">location_on</i>
-                  <h6>ул.Мира 21, площадь Кирова</h6>
+                  <h6>{{day.place}}</h6>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div class="card-buttons">
-          <a class="btn round" href="">Печать</a>
-          <a class="btn round" href="">Добавить к себе</a>
+          <a class="btn round" target="_blanks" href="/program/pdf/{{day.id}}">Печать</a>
+          <form action="/users/current/myprogram/{{day.id}}" method="POST">
+            <button class="btn round">Добавить себе</button>
+          </form>
         </div>
         <div class="text-content">
           {{{day.description}}}

@@ -6,6 +6,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   @media screen and (max-width: 768px) {
+    justify-content: space-evenly;
+  }
+  @media screen and (max-width: 651px) {
     justify-content: center;
   }
   .card {
@@ -41,7 +44,7 @@
     .image {
       max-width: 270px;
       height: 200px;
-      margin: 10px auto 0px auto;
+      margin: 0px auto 0px auto;
       @include screen(tablet) {
         max-width: 100%
       }
@@ -56,8 +59,14 @@
         height: 100px;
         margin: auto;
       }
+      .super-scalable-image {
+        max-width: 210px;
+        height: 70px;
+        margin: auto;
+      }
     }
     .title {
+      text-align: center;
       margin: 12px auto 0px auto;
     }
     .thesis {
@@ -100,6 +109,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
     i {
       color: $white;
     }
@@ -127,16 +137,26 @@
         margin-top: 7.5px;
         font-size: 16px;
       }
-      .btn {
-        background-color: $red;
-        border: 1px solid $white;
-        color: $white;
-        &:hover {
-          background-color: $white;
-          color: $red;
+      .buttons-row {
+        margin: auto auto 10px auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        .btn {
+          background-color: $red;
+          border: 1px solid $white;
+          color: $white;
+          margin: auto;
+          &:hover {
+            background-color: $white;
+            color: $red;
+          }
         }
       }
-      &:hover {
+    }
+    &:hover {
+      .card-overlay {
         opacity: 1;
       }
     }
@@ -147,6 +167,9 @@
     position: relative;
     color: $black;
     margin-top: 20px;
+    @include screen(phone-small) {
+      width: 320px;
+    }  
     &:hover {
       .small-overlay {
         bottom: 5px;
@@ -168,9 +191,17 @@
         }
       }
     }
+    .image-wrapper {
+      width: auto;
+      height: 250px;
+      overflow: hidden !important;
+    }
     .image {
       max-width: 360px;
       height: auto;
+      @include screen(phone-small) {
+        max-width: 320px;
+      } 
     }
     .small-overlay {
       width: 320px;
@@ -195,7 +226,7 @@
           height: 60px;
           border-radius: 50%;
           background-color: $red;
-          font-weight: 600;
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -206,13 +237,17 @@
             font-size: 20px;
           }
           .month {
-            margin-top: -2px;
             font-size: 16px;
+            margin-top: -2px;
+            font-weight: 400;
           }
         }
         .info-container {
           width: calc(100% - 80px);
           margin-left: 20px;
+          h6 {
+            font-size: 18px;
+          }
           .begining {
             font-size: 12px;
             margin-top: 7.5px;
@@ -230,8 +265,9 @@
           font-size: 14px;
         }
         .link-to-page {          
-          width: 35px;
-          height: 35px;
+          min-width: 35px;
+          min-height: 35px;
+          margin-left: 5px;
           border-radius: 50%;
           position: relative;
           i {
@@ -381,8 +417,18 @@
   .card-buttons {
     width: auto;
     height: auto;
+    position: relative;
     margin: 15px 0px 15px 15px;
+    display: flex;
+    form {
+      button {
+        @include screen(tablet) {
+          padding: 10px 30px;
+        }
+      }
+    }
     a {
+      margin: auto 20px auto 0px;
       @include screen(tablet) {
         padding: 10px 30px;
       }

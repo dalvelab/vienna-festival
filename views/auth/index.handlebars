@@ -38,15 +38,15 @@
 </section>
 
 <script>
-  const signUpButton = document.getElementById('signUp');
-  const signInButton = document.getElementById('signIn');
-  const container = document.getElementById('auth-container');
+  const signUpButton = document.querySelector('#signUp');
+  const signInButton = document.querySelector('#signIn');
+  const container = document.querySelector('#auth-container');
 
-  signUpButton.addEventListener('click', () => {
+  signUpButton.addEventListener('click', function() {
     container.classList.add("right-panel-active");
   });
 
-  signInButton.addEventListener('click', () => {
+  signInButton.addEventListener('click', function() {
     container.classList.remove("right-panel-active");
   });
 </script>

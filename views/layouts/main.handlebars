@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Венский Фестиваль</title>
+  <title>Венский Фестиваль 2019</title>
+  <meta name="description" content="Венский фестиваль музыкальных фильмов. Венский фестиваль, ЕКАТЕРИНБУРГ. Лучшие классические музыкальные произведения со всего мира на открытой площадке">
   {{!-- GLOBAL CSS --}}
   <link rel="stylesheet" href="/styles/css/style.min.css">
   {{!-- GOOGLE MATERIAL ICONS --}}
@@ -15,17 +16,27 @@
 </head>
 <body>
   <div class="overlay"></div>
-  
   {{>navbar}}
   
   <main>
+    {{>msg}}
     {{{body}}}
   </main> 
 
   {{>footer}}
 
-
+  {{!-- JQUERY --}}
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  {{!-- CART JS --}}
+  <script src="/js/cart.js"></script>
   {{!-- MENU SCRIPT --}}
   <script src="/js/menu.js"></script>
+  {{!-- ALERT --}}
+  <script>
+    $('.alert').delay(3500).hide(0);
+  </script>
 </body>
 </html>

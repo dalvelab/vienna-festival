@@ -1,17 +1,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-{{#each children}}
+
 <section class="children-welcome">
-  <h2 class="section-title">ВФ для <span class="font-red">Детей</span></h2>
+  <h2 class="section-title">Фестиваль <span class="font-red">Детям</span></h2>
   <div class="container">
-    <p class="plain-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quisquam quas aut debitis officiis corporis modi consequatur velit! Unde quaerat doloremque dolorum dolore, ducimus quia eligendi dicta deserunt explicabo numquam quas placeat molestias iste dolor maiores, voluptas cupiditate suscipit veniam, consequatur illum possimus iusto nemo quae. Accusamus autem et minima dolore quisquam, suscipit est, corporis beatae veniam rem pariatur eius ex quibusdam quis quos mollitia sed deserunt dignissimos amet, perferendis officia reiciendis? Aliquam dignissimos exercitationem error, officia unde sit voluptatem, similique itaque doloremque sed nemo sapiente fugiat harum accusamus consectetur magni sequi. Dolorem accusantium, quaerat nulla consequatur aliquam corrupti eligendi!</p>
+    <p class="plain-text">
+      На фестивале в Вене вы почти не увидите детей, потому что в католической Европе маленьким девочкам и мальчикам положено отправляться спать в 8 вечера. Наши мальчики и девочки в редкие дни лета сопровождают своих родителей везде и всюду и так же как и взрослые наслаждаются возможностью общаться, знакомиться, бегать, прыгать и веселиться!
+    </p>
+    <p class="plain-text">
+      Каждый год на фестивале открывается детская площадка на радость детям, мамам и папам. 
+      <span class="font-red">Обратите внимание</span>, на площадке нет нянь, с которыми можно оставить ребенка без присмотра. Беби ситеры, которые работают на площадке, только и следят за порядком.
+    </p>
+    <p class="plain-text">
+      Каждое воскресенье большой экран Венского принадлежит юным зрителям и тем, кто хотел бы хоть ненадолго вернуться в детство. По воскресеньям смотрим музыкальные фильмы для детей! Следите за детской программой.
+    </p>
   </div>
 </section>
 
 <section class="children-gallery">
-  <h2 class="section-title">Фотографии</h2>
     <div class="slider slider-nav slick-gallery" data-slick="{&quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 1, &quot;fade&quot;: false, &quot;cssEase&quot;: &quot;linear&quot;, &quot;arrows&quot;: false, &quot;centerMode&quot;: false, &quot;focusOnSelect&quot;: true, &quot;variableWidth&quot;: true, &quot;autoplay&quot;: false, &quot;responsive&quot;: [{&quot;breakpoint&quot;: 1400, &quot;settings&quot;: {&quot;centerMode&quot;: true}}]}">
+    {{#each children}}
     {{#each banners}}
       <div class="gallery-image-wrapper"><img src="/uploads/{{image}}" class="gallery-image"></div>
+    {{/each}}
     {{/each}}
   </div>
 </section>
@@ -20,36 +30,47 @@
   <h2 class="section-title">Детская <span class="font-red">Программа</span></h2>
   <div class="container">
     <div class="wrapper-row">
-      <div class="card-program">
-        <img src="/images/program-hero.jpg" alt="" class="image">
-        <div class="small-overlay">
-          <div class="top">
-            <div class="date-circle">
-              <div class="number bold">9</div>              
-              <div class="month regular">июля</div>
+      {{#each day}}
+      {{#if isChildren}}
+        <a href="/program/{{day}}" class="card-program">
+          <div class="image-wrapper">
+            <img src="/uploads/{{image}}" alt="" class="image">
+          </div>
+          <div class="small-overlay">
+            <div class="top">
+              <div class="date-circle">
+                <div class="number bold">{{number}}</div>              
+                <div class="month regular">{{month}}</div>
+              </div>
+              <div class="info-container">
+                <h6 class="bold">{{title}}</h6>
+                <div class="begining">{{week_day}}</div>
+                <div class="begining">Начало в {{time}}</div>
+              </div>
             </div>
-            <div class="info-container">
-              <h6 class="bold">Активность для Детей</h6>
-              <div class="begining">Начало в 19:00</div>
+            <div class="bottom">
+              <div class="place bold">{{place}}</div>
+              <div class="link-to-page">
+                <i class="material-icons">arrow_forward</i>
+              </div>
             </div>
           </div>
-          <div class="bottom">
-            <div class="place bold">УРФУ, что-то еще</div>
-          </div>
-        </div>
-      </div>
+        </a>
+      {{/if}}
+      {{/each}}
     </div>
   </div>
 </section>
 
+{{#each children}}
 <section class="children-contest">
   <h2 class="section-title">Детский <span class="font-red">Конкурс</span></h2>
   <div class="container">
       <p class="plain-text">{{{contest}}}</p>
   </div>
 </section>
+{{/each}}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
 <script src="/js/gallery.js"></script>
-{{/each}}

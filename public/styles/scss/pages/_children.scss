@@ -5,3 +5,9 @@
     line-height: 1.8;
   }
 }
+
+.children-welcome {
+  .container {
+    flex-direction: column;
+  }
+}

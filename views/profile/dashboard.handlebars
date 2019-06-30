@@ -1,10 +1,45 @@
 <section class="profile">
   <h2 class="section-title">Личный <span class="font-red">Кабинет</span></h2>
   <div class="container">
-    {{user.name}}
-    <br>
-    {{user.email}}
-    {{user.iAdmin}}
+    <div class="profile-wrapper">
+      <div class="profile-info">
+        <img src="/images/logo_sidebar.png" alt="">
+        <h6>{{user.name}}</h6>
+        {{!-- <a href="/users/current/edit" class="btn round">Редактировать</a> --}}
+      </div>
+      <div class="profile-actions">
+        <div class="top-navigation">
+          <a href="/users/current" class="active tab-link">Моя программа</a>
+          <a href="/users/orders" class="tab-link">Мои заказы</a>
+        </div>
+        <div class="content">
+          <div class="wrapper-row">
+            {{#each user.program}}
+              <a href="/program/{{day}}" class="card-program">
+                <img src="/uploads/{{image}}" alt="" class="image">
+                <div class="small-overlay">
+                  <div class="top">
+                    <div class="date-circle">
+                      <div class="number bold">{{number}}</div>              
+                      <div class="month regular">{{month}}</div>
+                    </div>
+                    <div class="info-container">
+                      <h6 class="bold">{{title}}</h6>
+                      <div class="begining">Начало в {{time}}</div>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div class="place bold">{{place}}</div>
+                    <div class="link-to-page">
+                      <i class="material-icons">arrow_forward</i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </section>

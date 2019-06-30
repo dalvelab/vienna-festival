@@ -1,13 +1,16 @@
-<section class="albums-all">
+<section class="admin-albums">
   <h2 class="section-title">Редактировать / Добавить <span class="font-red">Альбомы</span></h2>
   <a href="/admin/album/add" class="btn round upper">Добавить альбом</a>
   <div class="container">
       <div class="wrapper-row">
         {{#each albums}}
         <div class="card">
-        <a href="/admin/album/{{id}}" class="edit-icon">  
-          <i class="material-icons">delete</i>          
-        </a>
+        <div class="edit-icon">  
+          <form action="/admin/album/{{id}}?_method=DELETE" method="post" id="delete-form">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit"><i class="material-icons">delete</i></button>
+          </form>           
+        </div>
           {{#listItem 0 1 images}}
           <img src="/uploads/{{image}}" alt="" class="image" style="margin-top: 0px">
           {{/listItem}}

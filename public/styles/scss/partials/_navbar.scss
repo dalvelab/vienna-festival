@@ -34,8 +34,11 @@
     display: flex;
     align-items: center;
   }
+  .nav-weather-and-cart {
+    display: flex;
+  }
   .nav-weather {
-    width: 200px;
+    width: auto;
     height: 60px;
     display: flex;
     align-items: center;
@@ -50,6 +53,83 @@
       width: 50px;
       height: 50px;
       position: relative;
+    }
+    h6 {
+      word-wrap: unset;
+    }
+  }
+  .nav-cart {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+    @include screen(phone-small) {
+      width: 30px;
+      margin-left: 0;
+    }
+    img {
+      margin-bottom: 5px;
+    }
+    .cart-round-qty {
+      background-color: $red;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: absolute;
+      right: 6px;
+      bottom: 12px;
+      color: $white;
+      @include screen(phone-small) {
+        right: 0;
+      }
+    }
+    .hidden-cart {
+      position: absolute;
+      right: 10px;
+      top: 60px;
+      width: 200px;
+      height: auto;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px 0 rgba(156, 156, 156, 0.5);
+      text-align: center;
+      flex-direction: column;
+      display: none; 
+      #close-cart {
+        font-size: 25px;
+        color: #1b1b1b;
+        position: absolute;
+        right: 0;
+        top: -40px;
+        cursor: pointer;
+      }
+      h6 {
+        margin-top: 7px;
+        font-size: 17px;
+      }
+      .number {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #bd0000;
+        font-weight: 300;
+      }
+      .btn {
+        padding: 10px 0px;
+        width: 90%;
+        margin: 7px auto 0px auto;
+        font-size: 12.5px;
+        &:first-child {
+          margin-top: 10px;
+        }
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 }

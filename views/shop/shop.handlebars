@@ -1,18 +1,60 @@
 <section class="shop">
   <h2 class="section-title">Сувениры</h2>
-  <p class="section-thesis">Про прокат Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam non adipisci velit rerum. Expedita, voluptatum?</p>
+  <p class="section-thesis">Уральская погода непредсказуема, иногда с ней удается договориться, иногда – не совсем. Но мы всегда готовы сыграть по ее правилам: у нас в ПРОКАТЕ можно взять в аренду зонт, чтобы не мокнуть, или плед, чтобы поваляться и погреться на солнышке.
+Зонты, пледы, футболки, толстовки, кружки, дождевики и кайфовые рюкзаки от Венского фестиваля можно купить в нашей сувенирной лавке!
+</p>
   <div class="container">
     <div class="wrapper-row">
-      <div class="card card-shop hoverable">
-      <div class="card-overlay">
-          <h6 class="font-white">Какой то товар</h6>
-          <p class="shop-description font-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ipsa saepe nobis est, facere optio minima voluptate eius voluptates vitae.</p>
-          <a href="#" class="btn round">Купить</a>
+      {{#each items}}
+      <div class="card card-shop">
+        <img src="/uploads/{{image}}" style="margin-top: 0" alt="" class="image">
+        <h6 class="title">{{title}}</h6>
+        <p class="thesis">{{price}} рублей</p>
+        <div class="sizes">
+          {{#if size}}
+          {{#each size}}
+            <button class="btn-size">{{size}}</button>
+          {{/each}}
+          {{/if}}
         </div>
-        <img src="/images/stub-1.jpg" style="margin-top: 0" alt="" class="image">
-        <h6 class="title">Какой-то товар</h6>
-        <p class="thesis">1800 рублей</p>
+        <p class="description">{{thesis}}</p>
+        <form action="/users/cart/" item_id="{{id}}" method="POST">
+          <button type="submit" class="btn round add-to-cart">Добавить в корзину</button>
+        </form>
       </div>
+      {{/each}}
     </div>
   </div>
 </section>
+
+<script> 
+  const allItems = document.querySelectorAll('.card-shop');
+
+  allItems.forEach(item => item.addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-size')) {
+      let btnsArray = Array.prototype.slice.call(e.target.parentNode.children);
+      btnsArray.forEach(btn => {
+        if(btn.classList.contains('selected-size')){
+          btn.classList.remove('selected-size')
+        }
+      });
+      e.target.classList.add('selected-size');
+      
+      let selectedSize = e.target.innerHTML; 
+      let cardChildrenArray = Array.prototype.slice.call(this.children);
+      let formAdd = cardChildrenArray[cardChildrenArray.length - 1];
+      const item_id = formAdd.getAttribute('item_id');
+      formAdd.setAttribute('action', `/users/cart/${item_id}/${selectedSize}`);
+
+      let formAddChildren = Array.prototype.slice.call(formAdd.children);
+      let btnAdd = formAddChildren[0].setAttribute('size', selectedSize);
+    }
+
+    if(e.target.classList.contains('add-to-cart')) {
+      if(e.target.getAttribute('size') === null) {
+        e.preventDefault();
+        alert('Выберите размер')
+      } 
+    }
+  }));
+</script>

@@ -7,12 +7,15 @@ const DaySchema = new Schema({
         required: true
       },
       day: {
-        type: String,
+        type: Number,
         required: true
       },
       month: {
         type: String,
         required: true
+      },
+      week_day: {
+        type: String
       },
       number: {
         type: String,
@@ -32,6 +35,10 @@ const DaySchema = new Schema({
       thesis: {
         type: String,
         required: true
+      },
+      isChildren: {
+        type: Boolean,
+        default: false
       },
       description: {
         type: String,

@@ -25,7 +25,15 @@ const UserSchema = new Schema({
   Date: {
     type: Date,
     default: Date.now
-  }
+  },
+  program: [{
+    type: Schema.Types.ObjectId,
+    ref: 'day'
+  }],
+  orders: [{
+    type: Schema.Types.ObjectId,
+    ref: 'orders'
+  }]
 });
 
 module.exports = User = mongoose.model('users', UserSchema);

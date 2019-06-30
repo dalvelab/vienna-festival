@@ -8,7 +8,7 @@
         <input type="text" name="title" class="crud-input" value="{{day.title}}">
       </div>
       <div class="input-group">
-        <label for="text">Число дня фестиваля (Первый день - 1) </label>
+        <label for="text">Номер дня фестиваля по порядку, просто цифра (Первый день = 1) </label>
         <input type="number" name="day" class="crud-input" value="{{day.day}}">
       </div>
       <div class="input-group">
@@ -16,8 +16,12 @@
         <input type="number" name="number" class="crud-input" value="{{day.number}}">
       </div>
       <div class="input-group">
-        <label for="text">Месяц (Июль)</label>
+        <label for="text">Месяц (Июля)</label>
         <input type="text" name="month" class="crud-input" value="{{day.month}}">
+      </div>
+      <div class="input-group">
+        <label for="text">День недели (понедельник)</label>
+        <input type="text" name="week_day" class="crud-input" value="{{day.week_day}}">
       </div>
       <div class="input-group">
         <label for="text">Время Начала(19:00) </label>
@@ -32,8 +36,16 @@
         <input type="text" name="place" class="crud-input" value="{{day.place}}">
       </div>
       <div class="input-group">
-        <label for="text">Тезис (макс. 10 слов)</label>
+        <label for="text">Жанр (макс. 10 слов)</label>
         <input type="text" name="thesis" class="crud-input" value="{{day.thesis}}">
+      </div>
+      <div class="checkbox-single"> 
+        <label class="toggle">
+          <input class="toggle__input" name="isChildren" type="checkbox" {{#if day.isChildren}} checked="checked" {{/if}}>
+          <span class="toggle__label">
+            <span class="toggle__text">Выбрать, если детский день</span>
+          </span>
+        </label>
       </div>
       <div class="input-group">
         <label for="text">Большой текст описания</label>

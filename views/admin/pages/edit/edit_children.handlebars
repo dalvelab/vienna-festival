@@ -11,7 +11,17 @@
         <label for="text">Баннеры (1920 x 1080 - минимум 4 изображения)</label>
         <input type="file" name="banners" value="{{children.banners}}" class="crud-input" multiple>
       </div>
+      <div class="input-group">
+        <label for="text">Конкурс</label>
+        <textarea name="body" id="" cols="30" rows="10" class="crud-textarea">{{children.contest}}</textarea>
+      </div>
       <button class="btn round upper" type="submit">Опубликовать</button>
     </form>
   </div>
 </section>
+
+{{!-- CKEDITOR JS --}}
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace( 'body' );
+</script>

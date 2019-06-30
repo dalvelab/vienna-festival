@@ -1,0 +1,79 @@
+<section class="single-order">
+  <div class="container">
+    <div class="order-info">
+      <h6 class="regular text-center">ID Заказа <span class="font-red bold">{{order.idempotenceKey}}</span></h6>
+      <div class="order-info-wrapper">
+        <div class="order-info-container">
+          <h6 class="order-info-title">Область / Регион</h6>
+          <p>{{order.region}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Город</h6>
+          <p>{{order.city}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Адрес</h6>
+          <p>{{order.adress}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Квартира</h6>
+          <p>{{order.flatNumber}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">ФИО</h6>
+          <p>{{order.fio}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Телефон</h6>
+          <p>{{order.phone}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">E-mail</h6>
+          <p>{{order.email}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Итоговая цена</h6>
+          <p>{{order.totalPrice}}</p>
+        </div>
+        <div class="order-info-container">
+          <h6 class="order-info-title">Пользователь</h6>
+          <p>{{order.user.name}} / {{order.user.email}}</p>
+        </div>
+      </div>
+      <h6 class="regular text-center">Заказанные <span class="font-red bold">Товары</span></h6>
+      <div class="ordered-items-wrapper">
+        {{#each order.cart.items}}
+        <div class="item">
+          <div class="item-image">
+            <img src="/uploads/{{item.image}}" alt="">
+          </div>
+          <div class="item-information">
+            <h6>{{item.title}}</h6>
+            <h6>Стоимость: <span class="font-red">{{item.price}}</span></h6>
+            <h6>Размер: <span class="font-red">{{size}}</span></h6>
+            <h6>Количество: <span class="font-red">{{qty}}</span></h6>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="payment-info">
+      <h6 class="regular">Статус платежа</span></h6>
+      {{#if payment.paid}}
+      <div class="payment-status">
+        <div class="icon success">
+          <i class="material-icons">done</i>
+        </div>
+      </div>
+      <h6 class="payment-status-text font-green">Оплачено</h6>
+      {{else}}
+      <div class="payment-status">
+        <div class="icon error">
+          <i class="material-icons">error_outline</i>
+        </div>
+      </div>
+      <h6 class="payment-status-text font-red">Не оплачено</h6>
+      {{/if}}
+    </div>
+  </div>
+</section>

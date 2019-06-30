@@ -1,0 +1,40 @@
+<section class="cart">
+  {{#if items}}
+  <h2 class="section-title">Корзина</h2>
+  <div class="container">
+    <div class="items-list">
+      {{#each items}}
+      <div class="card-item-in-cart">
+        <a class="delete-item" href="/shop/cart/remove/{{item._id}}/{{size}}">
+          <i class="material-icons">close</i>
+        </a>
+        <div class="image">
+          <img src="/uploads/{{item.image}}" alt="">
+        </div>
+        <div class="information">
+          <h6 class="title">{{item.title}}</h6>
+          <h6 class="price">Стоимость: <span class="font-red">{{item.price}} рублей</span></h6>
+          <h6 class="size">Размер: <span class="font-red">{{size}}</span></h6>
+          <h6 class="qty">Количество: <span class="font-red">{{qty}} шт.</span></h6>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="summary">
+      <div class="content">
+        <h6>Итого</h6>
+        <h6>Количество: <span class="font-red">{{totalQty}} шт.</span></h6>
+        <h6>Стоимость: <span class="font-red">{{totalPrice}} рублей</span></h6>
+        {{#if user}}
+        <a href="/shop/checkout" class="btn-checkout">Оформить заказ</a>
+        {{else}}
+        <p>Чтобы оформить заказ нужно <span class="font-red">авторизоваться</span></p>
+        <a href="/users/auth" class="btn">Войти / Зарегистрироваться</a>
+        {{/if}}
+      </div>
+    </div>
+  </div> 
+  {{else}}
+  <h2 class="section-title">Корзина пуста</h2>
+  {{/if}}
+</section>

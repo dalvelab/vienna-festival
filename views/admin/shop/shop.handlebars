@@ -1,0 +1,30 @@
+<section class="admin-shop">
+  <h2 class="section-title">Управление <span class="font-red">Товарами</span></h2>
+  <a href="/admin/shop/add" class="btn round upper">Добавить товар</a>
+  <div class="container">
+  <table>
+          <tr>
+            <th>Наименование Товара</th>
+            <th>Цена</th>
+            <th>Редактировать / Удалить</th>
+          </tr>
+          {{#each items}}
+          <tr>
+            <td>{{title}}</td>
+            <td>
+              {{price}} рублей
+            </td>
+            <td>
+              <div class="row">
+                <a class="btn edit-btn" href="/admin/shop/edit/{{id}}">Редактировать</a>
+                <form style="margin: 0px 10px 0px 0px" action="/admin/shop/{{id}}?_method=DELETE" method="post" id="delete-form">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn">Удалить</button>
+                </form>               
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+    </table>
+  </div>
+</section>

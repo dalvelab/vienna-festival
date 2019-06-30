@@ -2,9 +2,26 @@
   <div class="container">
     <h6 class="nav-title font-black">
       <i id="openSidebar" class="material-icons">menu</i>
-      #Венский <span class="font-red">Фестиваль</span> 
+      <a style="font-size: 20px;" class="font-black" href="/">#венский<span class="font-red">фестиваль</span> </a>
     </h6>
-    <div class="nav-weather"></div>
+    <div class="nav-weather-and-cart">
+        <div class="nav-weather"></div>
+        <div class="nav-cart">
+          <img id="open-cart" src="/images/cart.svg" alt="">
+          <div class="cart-round-qty">{{session.cart.totalQty}}</div>
+          <div class="hidden-cart">
+            <i id="close-cart" class="fas fa-times"></i>
+            <h6>Всего в корзине: </h6>
+            <p class="number qty">{{session.cart.totalQty}} шт</p>
+            <h6>Итоговая цена: </h6>
+            <p class="number price">{{session.cart.totalPrice}} рублей</p>
+            <a href="/shop/cart" class="btn round">Перейти в корзину</a>
+            {{#if user}}
+            <a href="/shop/checkout" class="btn round">Оформить заказ</a>
+            {{/if}}
+          </div>
+        </div>
+    </div>
   </div>
 </nav>
 <aside class="sidebar">
@@ -21,6 +38,14 @@
       <i class="material-icons">music_note</i>
       Программа Фестиваля
     </a>
+    <a class="link font-black regular" href="/page/restaurant" class="link">
+      <i class="material-icons">restaurant</i>
+      Ресторанный Дворик
+    </a>
+    <a class="link font-black regular" href="/page/children" class="link">
+      <i class="material-icons">child_care</i>
+      Фестиваль Детям
+    </a>
     <a class="link font-black regular" href="/shop" class="link">
       <i class="material-icons">shopping_basket</i>
       Сувениры
@@ -28,14 +53,6 @@
     <a class="link font-black regular" href="/albums" class="link">
       <i class="material-icons">photo</i>
       Фото
-    </a>
-    <a class="link font-black regular" href="/page/restaurant" class="link">
-      <i class="material-icons">restaurant</i>
-      Ресторанный Дворик
-    </a>
-    <a class="link font-black regular" href="/page/children" class="link">
-      <i class="material-icons">child_care</i>
-      ВФ для детей
     </a>
     <a class="link font-black regular" href="/page/about" class="link">
       <i class="material-icons">info</i>

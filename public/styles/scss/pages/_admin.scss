@@ -8,6 +8,14 @@
   }
 }
 
+.admin-albums {
+  .edit-icon {
+    button {
+      background-color: transparent;
+    }
+  }
+}
+
 .admin-program,
 .admin-pages {
   .section-title {
@@ -15,7 +23,8 @@
   }
 }
 
-.admin-pages {
+.admin-pages,
+.admin-shop {
   table {
     margin-top: 20px;
     border-collapse: collapse;
@@ -35,7 +44,29 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        .edit-btn {
+          color: #28A745;
+          border: 1px solid #28A745;
+          &:hover {
+            color: $white;
+            background-color: #28A745;
+          }
+        }
     }
     }
 }
+}
+
+.admin-renters {
+  .card {
+    .edit-icon {
+      background-color: $gray;
+      i {
+        color: $red;
+      }
+      button {
+        background-color: transparent;
+      }
+    }
+  } 
 }

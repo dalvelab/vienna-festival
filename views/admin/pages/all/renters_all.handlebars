@@ -1,0 +1,21 @@
+<section class="admin-renters restaurant-renters">
+  <h2 class="section-title">Все <span class="font-red">Арендаторы</span></h2>
+  <div class="container">
+    <div class="wrapper-row">
+      {{#each restaraunt}}
+      {{#each renters}}
+      <div class="card">
+        <div class="edit-icon">  
+          <form action="/admin/restaraunt/renter/{{../id}}/{{id}}?_method=DELETE" method="post" id="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit"><i class="material-icons">delete</i></button>
+          </form>          
+        </div>
+        <img class="image" src="/uploads/{{image}}" alt="">
+        <h6 class="title">{{title}}</h6>
+      </div>
+      {{/each}}
+      {{/each}}
+    </div>
+  </div>
+</section>

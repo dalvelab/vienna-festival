@@ -1,0 +1,24 @@
+<section class="crud-program">
+  <h2 class="section-title">Добавить  <span class="font-red">Арендатора</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/admin/pages/restaraunt/renter/{{restaraunt.id}}" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="text">Название арендатора</label>
+        <input type="text" name="title" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Ссылка на сайт (полная)</label>
+        <input type="text" name="link" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Логотип (1920 x 1080 - одно изображение)</label>
+        <input type="file" name="image" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Товарный сегмент (Перечисление, через запятую)</label>
+        <textarea class="crud-textarea" name="items" cols="30" rows="10"></textarea>
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>

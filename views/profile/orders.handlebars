@@ -1,0 +1,43 @@
+<section class="profile">
+  <h2 class="section-title">Личный <span class="font-red">Кабинет</span></h2>
+  <div class="container">
+    <div class="profile-wrapper">
+      <div class="profile-info">
+        <img src="/images/logo_sidebar.png" alt="">
+        <h6>{{user.name}}</h6>
+        {{!-- <a href="/users/current/edit" class="btn round">Редактировать</a> --}}
+      </div>
+      <div class="profile-actions">
+        <div class="top-navigation">
+          <a href="/users/current" class="tab-link">Моя программа</a>
+          <a href="/users/orders" class="active tab-link">Мои заказы</a>
+        </div>
+        <div class="content">
+          <div class="wrapper-row">
+            {{#each user.orders}}
+              <a href="/users/order/{{_id}}" class="card-program">
+                <div class="image-wrapper">
+                  <img src="/images/box.svg" alt="" class="icon">
+                </div>
+                <div class="small-overlay">
+                  <div class="top">
+                    <div class="info-container full-width">
+                      <h6 class="bold"> Заказ №{{idempotenceKey}}</h6>
+                      <div class="begining">Заказчик: {{fio}}</div>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div class="place bold">{{region}}, {{city}}, {{adress}}, {{flatNumber}}</div>
+                    <div class="link-to-page">
+                      <i class="material-icons">arrow_forward</i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

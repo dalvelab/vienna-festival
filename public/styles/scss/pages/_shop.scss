@@ -1,17 +1,213 @@
 .shop {
   .card-shop {
-    width: 320px;
-    height: 320px;
+    width: 375px;
+    height: auto;
+    @include screen(phone-small) {
+      width: 300px;
+    }
     .image {
       max-width: 100%;
-      margin: 0;
+      height: auto;
+    }
+    .form-add-to-cart {
+      margin: auto;      
     }
     p {
       text-align: center;
     }
-    .shop-description {
-      padding: 10px;
-      text-align: center;
+    .thesis {      
+      margin-bottom: 15px;
     }
+    .description {
+      margin-bottom: 10px;
+    }
+    .sizes {
+      width: auto;
+      display: flex;
+      margin: 0px auto 10px auto;
+      .btn-size {
+        min-width: 30px;
+        min-height: 30px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray;
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: .2s ease-in-out;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          background-color: $red;
+          color: $white;
+        }
+      }
+      .selected-size {
+        background-color: $red;
+        color: $white;
+      }
+    }
+    form {
+      margin: auto;
+    }
+  }
+}
+
+.cart {
+  .container {
+    margin-top: 20px;
+    @include screen(tablet-wide) {
+      flex-direction: column;
+    }
+  }
+  .items-list {
+    width: 70%;
+    height: auto;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;   
+    @include screen(tablet-wide) {
+      width: 100%;
+    } 
+    .card-item-in-cart {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      position: relative;
+      box-shadow: 0 4px 30px #ccc;
+      margin-top: 30px;
+      @include screen(tablet) {
+        flex-direction: column;
+        height: auto;
+      } 
+      &:first-child {
+        margin-top: 0;
+      }
+      .delete-item {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        color: $black;
+        cursor: pointer;
+        i {
+          cursor: pointer;
+          font-size: 30px;
+        }
+      }
+      .image {
+        display: flex;
+        align-items: center;
+        @include screen(tablet) {
+          margin: auto;
+        } 
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
+      .information {
+        width: calc(100% - 280px);
+        height: 200px;
+        margin-left: 30px;
+        position: relative;
+        align-self: center;
+        @include screen(tablet) {
+          width: 100%;
+          align-self: flex-start;
+          margin-left: 7.5px;
+        } 
+        h6 {
+          margin-top: 12.5px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    min-width: 300px;
+    width: calc(30% - 20px);
+    height: 250px;
+    box-shadow: 0 4px 30px #ccc;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    @include screen(tablet-wide) {
+     margin: 30px 0px 0px 0px;
+     width: 100%;
+    } 
+    .content {
+      width: 90%;
+      margin: 20px auto 0px auto;
+      height: 230px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      @include screen(tablet-wide) {
+        text-align: center;
+       } 
+      h6 {
+        margin-top: 12.5px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      p {
+        text-align: center;
+        margin: auto auto 10px auto;
+      }
+      .btn {
+        margin: 0px auto 10px auto; 
+        text-align: center;
+      }
+      .btn-checkout {     
+        margin: auto auto 10px auto;  
+        padding: 12px 60px;
+        position: relative;
+        background-color: #00AA5B;
+        border: 1px solid #00AA5B;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+}
+
+.checkout {
+  .container {
+    margin-top: 20px;
+  }
+  .input-group {
+    .row-radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      p {
+        margin-left: 10px;
+      }
+    }
+  }
+  .total {
+    margin: 10px 0px 10px 0px;
+  }
+  .btn-pay {
+    max-width: 280px;
+    padding: 15px 50px;
+    font-size: 14px;
+    margin: 15px auto 0px auto;
+    background-color: #00AA5B;
+    border: 1px solid #00AA5B;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
   }
 }

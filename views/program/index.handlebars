@@ -1,19 +1,26 @@
 <section class="main-program">
   <h2 class="section-title">Программа <span class="font-red">Фестиваля 2019</span></h2>
-  <h6 class="section-thesis regular">В первый день живой концерт, заключительный - живой диджей парад, остальное - показ записей музыкальных фильмов</h6>
+  <h6 class="section-thesis regular">В юбилейный год фестиваль продлится 25 дней! С 3 по 27 июля.
+По традиции на открытии фестиваля звучит живая музыка в исполнении лучших музыкальных коллективов. В этом году 3 июля встречаем JANOSKA ENSEMBLE | Ансамбль "Яношка" из Вены. Закрывает фестиваль Dj-парад – 27 июля!
+В остальные дни зрители на большом экране увидят лучшие музыкальные фильмы Европы. Создавайте собственную программу в личном кабинете, чтобы ничего не пропустить.
+Смотрим музыку этим летом, как и последние 10 лет!
+</h6>
   <div class="container">
     <div class="wrapper-row">
     {{#each days}}
       <a href="/program/{{day}}" class="card-program">
-        <img src="/{{image}}" alt="" class="image">
+        <div class="image-wrapper">
+          <img src="/uploads/{{image}}" alt="" class="image">
+        </div>
         <div class="small-overlay">
           <div class="top">
             <div class="date-circle">
-              <div class="number bold">{{number}}</div>              
+              <div class="number bold">{{number}}</div>             
               <div class="month regular">{{month}}</div>
             </div>
             <div class="info-container">
               <h6 class="bold">{{title}}</h6>
+              <div class="begining">{{week_day}}</div>
               <div class="begining">Начало в {{time}}</div>
             </div>
           </div>

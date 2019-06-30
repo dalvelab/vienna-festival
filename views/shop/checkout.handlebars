@@ -1,0 +1,82 @@
+<section class="checkout">
+  <h2 class="section-title">Оформление <span class="font-red">Заказа</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/shop/payment" method="POST">
+    <h5 class="line-title">Способ Доставки</h5>
+      <div class="input-group">
+        <div class="row-radio">
+          <input type="radio" name="delivery" value="350" id="radio-delivery">
+          <p>Доставка Почтой России - 350₽</p>
+        </div>
+        <div class="row-radio">
+          <input type="radio" name="delivery" value="650" id="radio-delivery">
+          <p>Доставка СДЭК по России - 650₽</p>
+        </div>      
+      </div>
+      <h5 class="line-title">Адресные данные</h5>
+      <div class="input-group">
+        <label for="text">Область</label>
+        <input type="text" name="region" class="crud-input" required>
+      </div>
+      <div class="input-group">
+        <label for="text">Город</label>
+        <input type="text" name="city" class="crud-input" required>
+      </div>
+      <div class="input-group">
+        <label for="text">Адрес (улица, номер дома, корпус)</label>
+        <input type="text" name="adress" class="crud-input" required>
+      </div>
+      <div class="input-group">
+        <label for="text">Номер квартиры (просто цифра)</label>
+        <input type="number" name="flatNumber" class="crud-input" required>
+      </div>
+      <h5 class="line-title">Персональная информация</h5>
+      <div class="input-group">
+        <label for="text">ФИО</label>
+        <input type="text" name="fio" class="crud-input" required>
+      </div>
+      <div class="input-group">
+        <label for="text">Телефон</label>
+        <input type="number" name="phone" class="crud-input" required>
+      </div>
+      <div class="input-group">
+        <label for="text">Почта</label>
+        <input type="email" name="email" class="crud-input" required>
+      </div>
+      <h5 class="line-title total">Итого: <span id="totalPrice">{{total}}</span> рублей (с доставкой)</h5>
+      <input class="hiddenTotalPrice" type="hidden" name="totalPriceHidden">
+      <button type="submit" class="btn-pay">Перейти к оплате</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  const radioDelievery = document.querySelectorAll('#radio-delivery');
+  radioDelievery.forEach((radio) => {
+    radio.addEventListener('click', (e) => {
+      if(document.querySelector('#totalPrice').getAttribute('delieveryCost')) {
+        let prevDelieveryCost = document.querySelector('#totalPrice').getAttribute('delieveryCost');
+        let delieveryPrice = parseInt(e.target.getAttribute('value'), 10);
+        let itemPrice = parseInt(document.querySelector('#totalPrice').innerHTML, 10);  
+        let totalPrice = delieveryPrice + itemPrice - prevDelieveryCost;
+        document.querySelector('#totalPrice').setAttribute('delieveryCost', delieveryPrice);
+        document.querySelector('#totalPrice').innerHTML = totalPrice;
+        document.querySelector('.hiddenTotalPrice').setAttribute('value', totalPrice);
+      } else {
+        let delieveryPrice = parseInt(e.target.getAttribute('value'), 10);
+        let itemPrice = parseInt(document.querySelector('#totalPrice').innerHTML, 10);  
+        let totalPrice = delieveryPrice + itemPrice;
+        document.querySelector('#totalPrice').setAttribute('delieveryCost', delieveryPrice);
+        document.querySelector('#totalPrice').innerHTML = totalPrice;
+        document.querySelector('.hiddenTotalPrice').setAttribute('value', totalPrice);
+      }
+    });
+  });
+
+  const btnPay = document.querySelector('.btn-pay').addEventListener('click', function(e){
+    if(document.querySelector('#totalPrice').getAttribute('delieveryCost') === null) {
+      e.preventDefault();
+      alert('Выберите способ доставки')
+    }
+  });
+</script>

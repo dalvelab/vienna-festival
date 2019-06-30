@@ -8,9 +8,6 @@ const ChildrenSchema = new Schema({
   banners: [{
     type: Object
   }],
-  program: [{
-    type: Object
-  }],
   contest: {
     type: String
   }
@@ -39,7 +36,18 @@ const RestarauntSchema = new Schema({
     type: Object
   }],
   renters: [{
-    type: Object
+    title: {
+      type: String
+    },
+    link: {
+      type: String
+    },
+    image: {
+      type: String
+    },
+    items: {
+      type: [String]
+    }
   }]
 })
 

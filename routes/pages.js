@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 require('../models/Pages');
 const Children = mongoose.model('childrens');
 const Restaraunt = mongoose.model('restaraunts');
+const Day = mongoose.model('day');
 
 router.get('/restaurant', (req, res) => {
   Restaraunt.find()
@@ -15,13 +16,14 @@ router.get('/restaurant', (req, res) => {
   })
 });
 
-router.get('/children', (req, res) => {
-  Children.find()
-  .then(children => {
-    res.render('pages/children', {
-      children: children
-    });
-  })  
+router.get('/children', async(req, res) => {
+  const day = await Day.find().sort({day: 1});
+  const children = await Children.find();
+
+  await res.render('pages/children', {
+    day: day,
+    children: children
+  })
 });
 
 router.get('/about', (req, res) => {

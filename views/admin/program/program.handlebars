@@ -8,7 +8,9 @@
         <a href="/admin/program/edit/{{id}}" class="edit-icon">  
           <i class="material-icons">edit</i>          
         </a>
-        <img src="/{{image}}" alt="" class="image">
+        <div class="image-wrapper">
+          <img src="/uploads/{{image}}" alt="" class="image">
+        </div>
         <div class="small-overlay">
           <div class="top">
             <div class="date-circle">
@@ -17,6 +19,7 @@
             </div>
             <div class="info-container">
               <h6 class="bold">{{title}}</h6>
+              <div class="begining">{{week_day}}</div>
               <div class="begining">Начало в {{time}}</div>
             </div>
           </div>

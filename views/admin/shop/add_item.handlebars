@@ -1,0 +1,34 @@
+<section class="crud-program">
+  <h2 class="section-title">Добавить  <span class="font-red">Товар</span></h2>
+  <div class="container">
+    <form class="crud-form" action="/admin/shop" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="text">Заголовок</label>
+        <input type="text" name="title" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Цена (Просто цифра) </label>
+        <input type="number" name="price" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Изображение (1024 x 720)</label>
+        <input type="file" name="image" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Размеры (Разделить каждый размер проблем, т.е:S M L)</label>
+        <input type="text" name="sizes" class="crud-input">
+      </div>
+      <div class="input-group">
+        <label for="text">Небольшое описание (если нет размеров, к примеру, термокружка)</label>
+        <input type="text" name="thesis" class="crud-input">
+      </div>
+      <button class="btn round upper" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</section>
+
+{{!-- CKEDITOR JS --}}
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace( 'body' );
+</script>

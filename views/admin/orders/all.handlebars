@@ -1,0 +1,32 @@
+<section class="admin-shop">
+  <h2 class="section-title">База <span class="font-red">Заказов</span></h2>
+  <div class="container">
+  <table>
+          <tr>
+            <th>ID заказа</th>
+            <th>Цена</th>
+            <th>Детали</th>
+          </tr>
+          {{#each orders}}
+          <tr>
+            <td>
+              {{idempotenceKey}}
+              <br>
+              Дата заказа: {{date}}
+            </td>
+            <td>
+              Товары: {{cart.totalPrice}} рублей
+              <br>
+              Доставка: {{delivery}} рублей
+            </td>
+            <td>
+              <div class="row">
+                <a class="btn edit-btn" href="/admin/order/{{id}}">Подробнее</a>
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+    </table>
+  </div>
+</section>
+

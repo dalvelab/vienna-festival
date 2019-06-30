@@ -49,16 +49,35 @@
   } 
 } 
 
-.restaurant-renters,
-.restaurant-documents {
+.restaurant-renters {
   margin-top: 25px;
-}
-
-.restaurant-documents {
   .card {
-    .image {
-      width: 128px;
-      height: 128px;
+    width: 300px;
+    height: 300px;
+    .image-wrapper {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      padding: 5px 10px 0px 10px;
+      max-width: 270px !important;
+      height: auto !important;
+    }
+    h6 {
+      margin-top: 15px;
+    }
+    p {
+      margin: 15px 10px 0px 10px;
+      text-align: center;
+    }
+    .hidden-renter-value {
+      display: none;
+    }
+    .btn {
+      margin-top: 15px;
     }
   }
 }

@@ -99,3 +99,30 @@ section {
   height: auto;
   position: relative;
 }
+
+.modal {
+  width: 768px;
+  height: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: $white;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 12;
+  #closeModal {
+    font-size: 30px;
+    color: $white;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+  }
+  p {
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+}

@@ -1,3 +1,6 @@
+# OLD IP ADRESS #
+91.201.52.81
+
 # Vienna Website #
 
 Build a full stack application for Vienna Festival in Yekaterinburg.
@@ -10,7 +13,6 @@ Build a full stack application for Vienna Festival in Yekaterinburg.
 * SCSS mixins
 * Upload several files to gallery 
 * Emailing to subscribed people 
-
 
 # Status 
 [✅] - finished
@@ -33,66 +35,84 @@ Build a full stack application for Vienna Festival in Yekaterinburg.
 * [💡] - Lax.js - For scrolling Animation
 * [💡] - Cube.js - For Analitycs
 
-# Development phases and steps #
 
-* [😜] - Application Schema Creation [StartDate:23.04.19] - [FinishDate:23.04.19] 
-* [] - Setting Up Database Logic  [StartDate:24.04.19] - [FinishDate:26.04.19] 
-* [] - Creating DB Schemas  [StartDate:27.04.19] - [FinishDate:29.04.19] 
-* [] - Connect DB with backend  [StartDate:29.04.19] - [FinishDate:29.04.19] 
-* [] - Add Data from backend to DB  [StartDate:30.04.19] - [FinishDate:30.04.19] 
-* [] - Coding a responsive Markup [StartDate:1.05.19] - [FinishDate:4.05.19] 
-       * Pages List
-         * [] - welcome [StartDate:1.05.19] - [FinishDate:1.05.19]
-         * [] - login/register  [StartDate:1.05.19] - [FinishDate:1.05.19]
-         * [] - program [StartDate:1.05.19] - [FinishDate:1.05.19]
-         * [] - products  [StartDate:1.05.19] - [FinishDate:1.05.19]
-         * [] - photos  [StartDate:2.05.19] - [FinishDate:2.05.19]
-         * [] - restaraunt  [StartDate:2.05.19] - [FinishDate:2.05.19]
-         * [] - for kids  [StartDate:2.05.19] - [FinishDate:2.05.19]
-         * [] - dashboard   [StartDate:3.05.19] - [FinishDate:3.05.19]
-         * [] - admin panel [StartDate:3.05.19] - [FinishDate:3.05.19]
-                [AdminPages]
-                *
-                *
-                *                
-         * [] - individual program  [StartDate:4.05.19] - [FinishDate:4.05.19]
-         * [] - single day  [StartDate:4.05.19] - [FinishDate:4.05.19]
-         * [] - single album  [StartDate:4.05.19] - [FinishDate:4.05.19]
+# 7.06.2019 - development
 
-* [] - Implement Markup to Handlebars [StartDate:5.05.19] - [FinishDate:5.05.19]
-* [] - Connect Client and Server  [StartDate:6.05.19] - [FinishDate:6.05.19]
-* [] - Connect Payment System [StartDate:7.05.19] - [FinishDate:7.05.19]
-* [] - Test Payments and Admin Functionality  [StartDate:8.05.19] - [FinishDate:8.05.19]
-* [] - General Testing  [StartDate:9.05.19] - [FinishDate:9.05.19]
-        
-# Database #
+  # DONE #
+  [✅] - links to the footer on socials 
+  [✅] - Fixes from whatsapp
+  [✅] - Photos while editing 
+  [✅] - Program sort
+  [✅] - About festival (add document + info)
+  [✅] - enable editing giveaway on VF for Children approx. 15 mins 
+  [✅] - add renters on restaraut page - approx. 30 mins
+  [✅] - add children program - approx. 30 mins
+  [✅] - Flash Alerts
+# 14.06.2019 - development
 
-* [] - Describe in theory an idea of pages editing model for collection
-* [] - Connect DB with server
-* [] - Create User Schema
-* [] - Create Product Schema
-* [] - Create Program Schema
-* [] - Create Pages Schema
+  # DONE #
+  [✅] - User profile + all routes - approx. 2.5 hours 
+  [✅] - Create custom program - approx. 1 hour
+  [✅] - fix texy on ABOUT page
+  [✅] - add red color to important text parts
 
-# Server & API #
+# 17.06.2019 - development
 
-* [] - Develop main routes (Welcome page/ Main)
-* [] - Setting up Passport.js and JWT
-* [] - Develop user route
-* [] - Develop product routes 
-* [] - Develop program routes
-* [] - Develop pages route
+  # DONE
+  # CHILDREN PAGE
+  🕕 - approx 1 hour
+  [✅] - remove add children route and func
+  [✅] - create additional field or checkbox for program add view
+  [✅] - save children to DB
+  [✅] - output on page  
 
-# Client #
+  # SHOP, CART AND CHECKOUT PAGES
+  🕕 - approx 3 hours
+  [✅] - add size choice for each product 
+  [✅] - enable to store it 
+  [✅] - async cart 
+  [✅] - cart redesign
 
-* [] - Coding Welcome 
-* [] - Coding Admin Dashboard
-* [] - Coding Login / Register
-* [] - Coding Program
-* [] - Coding Product
-* [] - Coding Photos
-* [] - Coding Restaraunt  
-* [] - Coding Kids
-* [] - Coding Single Pages (Program Day, Album)
-* [] - Coding other pages
- 
+
+# 20.06.2019 - development
+
+  # QUICK FIXES
+  🕕 - approx 1 hour
+  [✅] - add day of week to program
+  [] - Renters redesign, enable to show approx 1000
+  [✅] - register on IOS
+  [✅] - sort by date children program
+
+  # SHOP 
+  🕕 - approx 2 hour
+  [✅] - add item to cart on production
+  [] - size output edit
+  [] - check for size existing
+
+  # CHECKOUT
+  🕕 - approx 3-4 hour
+  [✅] - connect payment system
+  [✅] - Checkout only for registered people 
+  [✅] - checkout test
+  [] - create Order schema
+  [] - add order details to payment
+  [] - add uuid to payment patameters
+  [] - save order to database + check for payment success (if payment = success) store in orders else (delete order)  
+  [] - reset the cart after payment
+  [] - output order details in users's profile
+
+  # MAILING 
+  🕕 - approx 3 hours
+  [] - compare nodemailer and sendGrid
+  [] - implement it
+  [] - create collection named "subscribers"
+  [] - enable subscription + flash message
+  [] - create a message template
+
+  # TO DO #
+  🕕 - approx 2 hour
+  [] - Restore password
+  [] - Loaders on Program and Souviniers pages - approx. 30 mins
+  [] - limit DarkSky API request amount + show it   
+  [] - flash messages 
+  [] - change sections title to H1

@@ -4,13 +4,28 @@
 
 <section class="restaurant-welcome">
   <h2 class="section-title">Ресторанный <span class="font-red">Дворик</span></h2>
+</section>
+
+<section class="restaurant-renters">
+  <h2 class="section-title">Арендаторы <span class="font-red">2019</span></h2>
   <div class="container">
-    <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non corporis consequuntur commodi iste necessitatibus sunt eveniet et, illo sint rerum perspiciatis aspernatur pariatur, explicabo aliquam quas, eos enim eum omnis ipsum vel laborum minima! Est quibusdam atque enim ab aliquid ratione autem, mollitia facilis voluptatum tempore nobis quo ullam. Suscipit magnam libero mollitia consequatur error tempore quaerat nostrum. Eligendi, error placeat perspiciatis cupiditate provident nemo nihil eius, quae vel eum neque alias, nulla totam. Doloremque error iste a? Cum similique neque veritatis. Nulla iste veritatis at repellat, cum obcaecati praesentium aut rem voluptatibus labore eos officiis quaerat earum ullam.</p>
+    <div class="wrapper-row">
+      {{#each renters}}
+      <div class="card renter-card">
+        <div class="image-wrapper">
+          <img class="image" src="/uploads/{{image}}" alt="">
+        </div>
+        <h6 class="title">{{title}}</h6>
+        <p class="hidden-renter-value renter-description">{{items}}</p>
+        <p class="hidden-renter-value renter-link">{{link}}</p>
+        <button class="btn round openModal">Подробнее</button>
+      </div>
+      {{/each}}
+    </div>
   </div>
 </section>
 
 <section class="restaurant-gallery">
-  <h2 class="section-title">Галерея</h2>
     <div class="slider slider-nav slick-gallery" data-slick="{&quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 1, &quot;fade&quot;: false, &quot;cssEase&quot;: &quot;linear&quot;, &quot;arrows&quot;: false, &quot;centerMode&quot;: false, &quot;focusOnSelect&quot;: true, &quot;variableWidth&quot;: true, &quot;autoplay&quot;: false, &quot;responsive&quot;: [{&quot;breakpoint&quot;: 1400, &quot;settings&quot;: {&quot;centerMode&quot;: true}}]}">
     {{#each banners}}
     <div class="gallery-image-wrapper"><img src="/uploads/{{image}}" class="gallery-image"></div>
@@ -19,69 +34,64 @@
 </section>
 
 <section class="restaurant-sketch">
-  <h2 class="section-title">Проект <span class="font-red">Домиков</span></h2>
+  <h2 class="section-title">Аренда <span class="font-red">Домиков</span></h2>
   <div class="container">
     <div class="row">
       <div class="column">
-        <img src="/images/stub-3.jpg" alt="">
+        <img src="/images/1_house.jpg" alt="">
       </div>
       <div class="column">
-        <h6 class="title">Заголовок</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, eos soluta tempora repellendus totam deleniti, officiis molestias, officia excepturi magni temporibus quis omnis tenetur exercitationem! Debitis doloribus deleniti nisi quasi consequuntur, blanditiis eius dolorum tempore minus soluta repudiandae, molestiae autem dolorem, doloremque possimus ad ipsum velit magnam recusandae repellendus impedit!</p>
+           <p class="content-text">ВЕНСКИЙ ФЕСТИВАЛЬ – это не только про музыку! С годами Венский стал главной площадкой для летних посиделок с друзьями. Местом, где за один вечер можно повстречаться со всеми любимыми людьми, которых редко видишь из-за плотных рабочих графиков. Это оазис безмятежности и гармонии, который притягивает горожан. Вам не придется делать выбор – сходить на концерт или поужинать в любимом кафе. Лучшие кафе и рестораны города готовят для вас все самое вкусное и разное в нашем Ресторанном Дворике.
+          <span class="font-red">#летомужинаемздесь</span></p>
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <h6 class="title">Заголовок</h6>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, eos soluta tempora repellendus totam deleniti, officiis molestias, officia excepturi magni temporibus quis omnis tenetur exercitationem! Debitis doloribus deleniti nisi quasi consequuntur, blanditiis eius dolorum tempore minus soluta repudiandae, molestiae autem dolorem, doloremque possimus ad ipsum velit magnam recusandae repellendus impedit!</p>
+        <h6 class="title">Арендаторам</h6>
+        <p class="content-text">В этот юбилейный год наши друзья из архитектурной мастерской INGENIUM помогли апгрейдить наш Ресторанный Дворик. Ребята придумали новую форму домишек! Они не только милые, но и более функциональные и удобные. Как стать резидентом Ресторанного Дворика и арендовать домик, рассказываем <span class="font-red">по телефону: 8 (343) 350 05 03</span> 
+        </p>
       </div>
       <div class="column">
-        <img src="/images/stub-2.jpg" alt="">
+        <img src="/images/2_house.jpg" alt="">
       </div>
     </div>
   </div>
 </section>
 
-<section class="restaurant-renters">
-  <h2 class="section-title">Арендаторы</h2>
-  <div class="container">
-    <div class="wrapper-row">
-      <div class="card hoverable">
-        <div class="card-overlay">
-          <h6 class="font-white">Меню</h6>
-          <ul class="menu-list font-white">
-            <li>Какая-то еда</li>
-            <li>Какая-то еда</li>
-            <li>Какая-то еда</li>
-            <li>Какая-то еда</li>
-          </ul>
-          <a href="#" class="btn round">Перейти на Сайт</a>
-        </div>
-        <img class="image" src="/images/stub-1.jpg" alt="">
-        <h6 class="title">Название Арендатора</h6>
-        <ul class="icons-list">
-          <li><i class="fas fa-apple-alt"></i></li>
-          <li><i class="fas fa-hamburger"></i></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="restaurant-documents">
-  <h2 class="section-title">Скачать <span class="font-red">Документы</span></h2>
-  <div class="container">
-    <div class="wrapper-row">
-      <div class="card">
-        <img src="/images/word_logo.png" alt="" class="image">
-        <h6 class="title">Чертеж Домика</h6>
-        <a href="#" class="btn round" download="#" target="_blink">Скачать</a>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="modal">
+  <i id="closeModal" class="material-icons">clear</i>
+  <h5 class="modal-title text-center">Арендатор №2</h5>
+  <p class="plaing-text modal-descriptiom"></p>
+  <a href="" target="_blank" class="btn round modal-link">Перейти на сайт</a>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
 <script src="/js/gallery.js"></script>
+<script>
+  const renterCard = document.querySelectorAll('.renter-card');
+  const modal = document.querySelector('.modal');
+
+  renterCard.forEach(renter => renter.addEventListener('click', (e) => {
+    if(e.target.classList.contains('openModal')) {
+      let description, title, link;
+      let renterChildren = renter.children;
+      title = renterChildren[1].innerHTML;
+      link = renterChildren[3].innerHTML;
+      description = renterChildren[2].innerHTML;
+      modal.style.display = 'flex';
+      overlay.style.display = 'block';
+
+      document.querySelector('.modal-title').innerHTML = title;
+      document.querySelector('.modal-descriptiom').innerHTML = description;
+      document.querySelector('.modal-link').setAttribute('href', link);
+    }
+  }));
+
+  const closeModal = document.querySelector('#closeModal').addEventListener('click', () => {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+</script>
 {{/each}}
+

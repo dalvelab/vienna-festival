@@ -1,0 +1,26 @@
+.about-main {
+  .container {
+    flex-direction: column;
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.about-info {
+  .contacts-list {
+    li {
+      font-size: 16px;
+      line-height: 2;
+    }
+  }
+}
+
+.about-documents {
+  .card {
+    .image {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}

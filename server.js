@@ -7,7 +7,7 @@ const path  = require('path');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-
+const flash = require('connect-flash');
 const app = express();
 
 // Load Routes
@@ -50,16 +50,21 @@ require('./config/passport')(passport);
 
 app.use(cookieParser());
 app.use(session({
-  secret: 'secret',
+  secret: 'dalvelab',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
 
 // Passport middleware
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session({
+  cookie: {maxAhe: 60000}
+}));
+
+app.use(flash());
 
 app.use(function(req, res, next)  {
+  res.locals.messasges = req.flash();
   res.locals.user = req.user || null;
   res.locals.session = req.session;
   next();
