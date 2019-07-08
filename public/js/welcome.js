@@ -43,11 +43,46 @@ function initializeClock(id, endtime) {
       clearInterval(timeinterval);
     }
   }
-
-  updateClock();
   let timeinterval = setInterval(updateClock, 1000);
+  updateClock();
 }
 
 let deadline = document.querySelector('.welcome-counter').getAttribute('time');
 
 initializeClock('clockdiv', deadline);
+
+function getCurrentProgramDay() {
+  const newDate = new Date();
+  const day = newDate.getDate().toString();
+  const month = (newDate.getMonth() + 1).toString();
+  const year = newDate.getFullYear().toString();
+
+  const startDay = year + '-' + '0' + month.slice(-2) + '-' + '0' + day.slice(-2);
+  startDay.toString();
+  let output = '';
+
+  fetch(`http://vmff.ru/currentday/${startDay}`)
+  .then(res => {
+    res.json()
+    .then(data => {
+      output += `
+      <div class="program-container">
+        <div class="date-circle">
+          <span class="number">${data.number}</span>
+        <span class="month">${data.month}</span> 
+        </div>
+        <div class="text">
+          <h6>${data.title}</h6>
+          <p>${data.thesis}</p>
+          <a href="/program/${data.day}" class="btn round">Подробнее</a>
+        </div>
+      </div>
+    `;
+    document.querySelector('.welcome-program-day').innerHTML = output;
+    })
+  })
+}
+
+window.onload = function(){
+  getCurrentProgramDay()
+}

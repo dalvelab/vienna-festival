@@ -43,6 +43,9 @@ const DaySchema = new Schema({
       description: {
         type: String,
         required: true
+      },
+      startDay: {
+        type: String
       }
 });
 

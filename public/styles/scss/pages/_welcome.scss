@@ -28,9 +28,62 @@
       top: 40%;
     }
   }
+  .welcome-program-day {
+    width: 400px;
+    height: 140px;
+    margin: auto auto 100px auto;
+    background-color: $white;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.05), 0 15px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    @include screen(phone) {
+      width: 310px;  
+      height: 140px;     
+      margin-bottom: 80px;
+    }
+    .program-container {
+      width: 100%;
+      height: 100%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      .date-circle {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        margin: 0px 0px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $red;
+        span {
+          color: $white;
+          font-size: 16px;
+        }
+      }
+      .text {
+        width: calc(100% - 105px);
+        height: 100%;
+        position: relative;
+        margin: 10px 0px 0px 25px;
+        display: flex;
+        flex-direction: column;
+        h6 {
+          font-size: 16px;
+        }
+        a {
+          margin: 10px auto 0px 0px
+        }
+      }
+    }
+  }
   .welcome-counter {
     width: auto;
     height: auto;
+    display: none;
     margin: auto auto 100px auto;
     @include screen(phone) {
       width: 280px;
